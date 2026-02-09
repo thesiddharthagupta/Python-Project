@@ -20,7 +20,7 @@ while orderMore.lower() == "yes":
     elif choice == 4:
         total_bill += 150 * quantity
     else:
-        print("Invalid choice!")
+        print("Invalid choice!, please chose (1-4)")
         continue
 
     orderMore = input("Do you want to order more? (Yes/No): ")
@@ -34,3 +34,4 @@ print("8% Tax:", tax)
 print("Final Bill Amount:", final_bill)
 print("-----------------------------")
 print("Thank you for visiting our Ice Cream Parlour!")
+
