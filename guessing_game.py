@@ -1,14 +1,14 @@
 import random
 
 easy_words = ["apple","banana","orange","pinapple"]
-medium_words = ["python", "Aeroplane", "helicopter", "elephant", "Umbrella"]
+medium_words = ["python", "aeroplane", "helicopter", "elephant", "umbrella"]
 hard_words = ["kumfu", "gymnastic", "enlightments", "commplicated"]
 
 print("Welcome to the password guessing game!")
-print("Choose a Difficulty Level: easy, medium or Hard ")
-
+print("Choose a Difficulty Level: easy, medium or hard")
 
 level = input("Enter difficulty: ").lower()
+
 if level == "easy":
     secret = random.choice(easy_words)
 elif level == "medium":
@@ -16,7 +16,7 @@ elif level == "medium":
 elif level == "hard":
     secret = random.choice(hard_words)
 else:
-    print("Invalid Choice. defaullting to easy level")
+    print("Invalid Choice. defaulting to easy level")
     secret = random.choice(easy_words)
 
 attempts = 0
@@ -27,15 +27,16 @@ while True:
     attempts += 1
 
     if guess == secret:
-        print(f"Congratulation! You guessed it in {attempts} attempts.")
+        print(f"Congratulations! You guessed it in {attempts} attempts.")
         break
 
     hint = ""
-    for i in range (len(secret)):
+    for i in range(len(secret)):
         if i < len(guess) and guess[i] == secret[i]:
             hint += guess[i]
         else:
             hint += "_"
-    
-    print("Hint: ", hint)
+
+    print("Hint:", hint)
+
 print("Game Over!")
