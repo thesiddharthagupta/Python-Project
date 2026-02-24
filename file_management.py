@@ -60,26 +60,26 @@ def main():
 
         choice = input("Enter your choice (1-6) = ")
 
-        if choice == '1':
+        if choice == "1":
             filename = input("Enter the file name to create = ")
             create_file(filename)
 
-        elif choice == '2':
+        elif choice == "2":
             view_all_files()
 
-        elif choice == '3':
+        elif choice == "3":
             filename = input("Enter file name to delete = ")
             delete_file(filename)
 
-        elif choice == '4':
+        elif choice == "4":
             filename = input("Enter file name to read = ")
             read_file(filename)
 
-        elif choice == '5':
+        elif choice == "5":
             filename = input("Enter file name to edit = ")
             edit_file(filename)
 
-        elif choice == '6':
+        elif choice == "6":
             print("Exiting program...")
             break
 
